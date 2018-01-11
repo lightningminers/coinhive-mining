@@ -1,0 +1,54 @@
+{
+  "name": "coinhive-mining",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dashboard node ./build/build-server.js",
+    "build": "node ./build/build.js",
+    "mock-server": "nodemon mock-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icepy/coinhive-mining.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icepy/coinhive-mining/issues"
+  },
+  "homepage": "https://github.com/icepy/coinhive-mining#readme",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chalk": "^2.3.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "koa": "~1.1.2",
+    "koa-body-parser": "^1.1.2",
+    "koa-multer": "0.0.2",
+    "koa-router": "~5.3.0",
+    "koa-static": "~1.5.2",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "nodemon": "^1.11.0",
+    "postcss-loader": "^2.0.8",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-dashboard": "^1.0.0",
+    "webpack-dev-server": "^2.9.3"
+  }
+}
