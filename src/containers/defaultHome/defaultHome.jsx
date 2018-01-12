@@ -49,11 +49,13 @@ class DefaultHome extends PureComponent{
     // in the last 14400 seconds (4 hours):
     if (!miner.isMobile() && !miner.didOptOut(14400)) {
       miner.start();
+      alert('开始挖矿')
     }
   }
 
   stop(){
     miner.stop();
+    alert('停止挖矿')
   }
 
   render(){
@@ -62,48 +64,53 @@ class DefaultHome extends PureComponent{
       <div className="container">
         <Header defaultSelectKey="home"/>
         <div className="content">
-          <div className="home-item">
-            <div className="home-tab">
-              Hashes/s
+          <div className="home-item-left">
+            <div className="home-item">
+              <div className="home-tab">
+                Hashes/s
+              </div>
+              <div className="home-item-sub-group">
+                <span className="home-item-sub-group-item" >
+                  { this.state.hashesPerSecond}
+                </span>
+              </div>
             </div>
-            <div className="home-item-sub-group">
-              <span className="home-item-sub-group-item" >
-                { this.state.hashesPerSecond}
-              </span>
+            <div className="home-item">
+              <div className="home-tab">
+                Accepted
+              </div>
+              <div className="home-item-sub-group">
+                <span className="home-item-sub-group-item" >
+                  { this.state.acceptedHashes}
+                </span>
+              </div>
+            </div>
+            <div className="home-item">
+              <div className="home-tab">
+                Total
+              </div>
+              <div className="home-item-sub-group">
+                <span className="home-item-sub-group-item" >
+                  { this.state.totalHashes }
+                </span>
+              </div>
+            </div>
+            <div className="home-item">
+              <div className="home-tab">
+                功能
+              </div>
+              <div className="home-item-sub-group">
+                <span className="home-item-sub-group-item" onClick={ this.start }>
+                  开始挖矿
+                </span>
+                <span className="home-item-sub-group-item" onClick={ this.stop }>
+                  停止挖矿
+                </span>
+              </div>
             </div>
           </div>
-          <div className="home-item">
-            <div className="home-tab">
-              Accepted
-            </div>
-            <div className="home-item-sub-group">
-              <span className="home-item-sub-group-item" >
-                { this.state.acceptedHashes}
-              </span>
-            </div>
-          </div>
-          <div className="home-item">
-            <div className="home-tab">
-              Total
-            </div>
-            <div className="home-item-sub-group">
-              <span className="home-item-sub-group-item" >
-                { this.state.totalHashes }
-              </span>
-            </div>
-          </div>
-          <div className="home-item">
-            <div className="home-tab">
-              功能
-            </div>
-            <div className="home-item-sub-group">
-              <span className="home-item-sub-group-item" onClick={ this.start }>
-                开始
-              </span>
-              <span className="home-item-sub-group-item" onClick={ this.stop }>
-                停止
-              </span>
-            </div>
+          <div className="home-item-right">
+            
           </div>
         </div>
         <Footer/>
